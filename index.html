@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/js-datepicker/dist/datepicker.min.css">
 </head>
 <body>
-  <h1>To-Do List</h1>  
+  <h1>To-Do List</h1>
+  
+  <form>
+    <label for="Task">Task</label>
+    <input type="text" id="Task">
+    <span>*</span>
+    <br>
+
+    <label for="Due-Date">Due Date</label>
+    <input type="text" id="Due">
+    <span>*</span>
+    <br>
+
+    <input type="checkbox">
+    <label for="completed">Completed</label>
+    <br>
+
+    <input type="button" id="AddItem" value="Add Item">
+    <br>
+
+  </form>
+  <script src="node_modules/js-datepicker/dist/datepicker.min.js">
+  </script>
 </body>
 </html>

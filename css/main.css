@@ -1,6 +1,7 @@
 
-.To-Do {
+/*.To-Do {
     width: 20%;
+    margin-left:45%;
     box-sizing: border-box;
     background-color: red;
     padding: 5px;
@@ -10,8 +11,57 @@
 
 .completed {
     width: 20%;
+    margin-right:45%;
     box-sizing: border-box;
     background-color: green;
     padding: 5px;
     margin: 5px;
+} */
+
+body {
+    background-image: url("chalkfull.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#incomplete-items {
+    width: 20%;
+    text-align: center;
+    background-color: red;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    margin-left: 40%;
+}
+
+#completed-items {
+    width:20%;
+    text-align: center;
+    background-color: green;
+    padding: 5px;
+    margin: 10px;
+    cursor:default;
+    margin-left: 40%;
+}
+
+h1 {
+    width: 12%;
+    background-color:beige;
+    margin-top:12px;
+    margin-left:45%;
+}
+
+#form {
+    text-align: center;
+    width: 13%;
+    margin-left:45%;
+    background-color:beige;
+}
+
+#header3 {
+    text-align: center;
+    width: 13%;
+    margin-left:45%;
+    background-color:beige;
 }

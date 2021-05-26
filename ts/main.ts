@@ -11,11 +11,26 @@ window.onload = function () {
 }
 
 function main() {
+    if (isValid() == true) {
+    const itemKey = "item";
     let item = getItem();
+    let itemStr = JSON.stringify(item);
+    localStorage.setItem(itemKey, itemStr);
+
+    let resItem = localStorage.getItem(itemKey);
+    let myItem:ToDoItem = JSON.parse(resItem);
+    
+    console.log(myItem);
     displayItem(item);
+    }
 }
 
 function isValid():boolean {
+    let text = (<HTMLInputElement>document.getElementById("Task")).value;
+    if (text == "" || text.length == 0 || text == null) {
+        alert("Task cannot be empty.");
+        return false;
+    }
     return true;
 }
 
@@ -71,6 +86,6 @@ function markComplete() {
     let itemDiv = <HTMLElement>this;
     itemDiv.classList.add("completed");
 
-    let completeItems = document.getElementById("complete-items");
+    let completeItems = document.getElementById("completed-items");
     completeItems.appendChild(itemDiv);
 }

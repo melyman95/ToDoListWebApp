@@ -8,10 +8,23 @@ window.onload = function () {
     addItem.onclick = main;
 };
 function main() {
-    var item = getItem();
-    displayItem(item);
+    if (isValid() == true) {
+        var itemKey = "item";
+        var item = getItem();
+        var itemStr = JSON.stringify(item);
+        localStorage.setItem(itemKey, itemStr);
+        var resItem = localStorage.getItem(itemKey);
+        var myItem = JSON.parse(resItem);
+        console.log(myItem);
+        displayItem(item);
+    }
 }
 function isValid() {
+    var text = document.getElementById("Task").value;
+    if (text == "" || text.length == 0 || text == null) {
+        alert("Task cannot be empty.");
+        return false;
+    }
     return true;
 }
 function getItem() {
@@ -52,6 +65,6 @@ function getInput(id) {
 function markComplete() {
     var itemDiv = this;
     itemDiv.classList.add("completed");
-    var completeItems = document.getElementById("complete-items");
+    var completeItems = document.getElementById("completed-items");
     completeItems.appendChild(itemDiv);
 }

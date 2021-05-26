@@ -30,7 +30,12 @@
     <br>
 
   </form>
-  <script src="node_modules/js-datepicker/dist/datepicker.min.js">
+
+  <script src="node_modules/js-datepicker/dist/datepicker.min.js"></script>
+  
+  <script>
+    const picker = datepicker("#Due");
+    picker.setMin(new Date());
   </script>
 </body>
 </html>

@@ -22,7 +22,7 @@
     <span>*</span>
     <br>
 
-    <input type="checkbox">
+    <input type="checkbox" id="is-Complete">
     <label for="completed">Completed</label>
     <br>
 
@@ -31,8 +31,12 @@
 
   </form>
 
+  <h3>To-Do List</h3>
+  <div id="incomplete-items"></div>
+  <div Id="completed-items"></div>
+
   <script src="node_modules/js-datepicker/dist/datepicker.min.js"></script>
-  
+  <script src="js/main.js"></script>
   <script>
     const picker = datepicker("#Due");
     picker.setMin(new Date());

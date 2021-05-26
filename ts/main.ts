@@ -11,8 +11,8 @@ window.onload = function () {
 }
 
 function main() {
-        let item = getItem();
-        displayItem(item);
+    let item = getItem();
+    displayItem(item);
 }
 
 function isValid():boolean {
@@ -43,6 +43,9 @@ function displayItem(item:ToDoItem):void {
     itemDate.innerText = item.dateDue.toString();
 
     let itemDiv = document.createElement("div");
+    itemDiv.onclick = markComplete;
+    itemDiv.classList.add("To-Do");
+
     if (item.Completed) {
         itemDiv.classList.add("completed");
     }
@@ -62,4 +65,12 @@ function displayItem(item:ToDoItem):void {
 
 function getInput(id):HTMLInputElement {
     return <HTMLInputElement>document.getElementById(id);
+}
+
+function markComplete() {
+    let itemDiv = <HTMLElement>this;
+    itemDiv.classList.add("completed");
+
+    let completeItems = document.getElementById("complete-items");
+    completeItems.appendChild(itemDiv);
 }

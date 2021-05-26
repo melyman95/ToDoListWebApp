@@ -11,15 +11,15 @@
 <body>
   <h1>To-Do List</h1>
   
-  <form>
+  <form id="form">
     <label for="Task">Task</label>
     <input type="text" id="Task">
-    <span>*</span>
+    <span></span>
     <br>
 
     <label for="Due-Date">Due Date</label>
     <input type="text" id="Due">
-    <span>*</span>
+    <span></span>
     <br>
 
     <input type="checkbox" id="is-Complete">
@@ -33,10 +33,11 @@
 
   <h3>To-Do List</h3>
   <div id="incomplete-items"></div>
-  <div Id="completed-items"></div>
+  <div id="completed-items"></div>
 
   <script src="node_modules/js-datepicker/dist/datepicker.min.js"></script>
   <script src="js/main.js"></script>
+
   <script>
     const picker = datepicker("#Due");
     picker.setMin(new Date());

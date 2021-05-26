@@ -1,19 +1,17 @@
-form {
-    margin-left: 45%;
+
+.To-Do {
+    width: 20%;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
 }
 
-h1 {
-    margin-left: 45%;
-}
-
-h3 {
-    margin-left: 45%;
-}
-
-#completed-items {
-    margin-right: 10%;
-}
-
-#incomplete-items {
-    margin-left: 10%;
+.completed {
+    width: 20%;
+    box-sizing: border-box;
+    background-color: green;
+    padding: 5px;
+    margin: 5px;
 }
